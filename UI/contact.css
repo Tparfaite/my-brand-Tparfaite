@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+}
+.container{
+    background-image: url(../assets/images/contactim.gif);
+    background-size: cover;
+    height: 700px;
+}
+.header{
+   margin-top: 10px;
+    background-color: #397130;
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    height: 70px;
+}
+.righthead a{
+color: white;
+text-decoration: none;
+grid-gap: 20px;
+font-family: sans-serif;
+}
+.righthead{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 60px;
+    padding-top: 20px;
+}
+#tparf{
+    padding-left: 70px;
+    padding-top: 17px; 
+}
+.cbody h1{
+    padding-top: 20px;
+    padding-left: 100px;
+}
+.body{
+    margin-top: 60px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.form{
+    background-color: #352E20;
+    color: white;
+    padding-left: 60px;
+    height: 380px;
+    width: 250px;
+    padding-top: 10px;
+    margin-left: 240px;
+    border-radius: 12px;
+}
+#submit{
+    color: white;
+    background-color: #397130;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 90px;
+    margin-left: 40px;
+}
+.leftbody a{
+    color: white;
+    text-decoration: none;
+}
+.leftbody{
+    background-color: #352E20;
+    color: white;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 480px;
+}
+.form h3{
+    text-decoration: underline;
+    padding-left: 20px;
+}
+.leftbody p{
+    font-size: 18px;
+}
+.form input:text{
+    margin-left: 40px;
+}
+.form input[type]{
+    border-radius: 5px;
+}
+.form span{
+    padding-left: 40px;
+}
