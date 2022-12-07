@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blogs</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="lefthead">
+                <h2 id="tparf">TParfaite</h2>
+            </div>
+            <div class="righthead">
+                <div class="home">
+                    <a href="http://127.0.0.1:5500/UI/homepage.html">Home</a>
+                </div>
+              <div class="about">
+                <a href="http://127.0.0.1:5500/UI/aboutme.html">About me</a>
+              </div>
+              <div class="skills">
+                <a href="http://127.0.0.1:5500/UI/skills.html">Skills</a>
+              </div>
+              <div class="myWork">
+                <a href="http://127.0.0.1:5500/UI/myWork.html">My work</a>
+              </div>
+              <div class="contactMe">
+                <a href="http://127.0.0.1:5500/UI/contact.html">Contact me</a>
+              </div>
+              <div class="blogs">
+                <a href="http://127.0.0.1:5500/UI/blogs.html">Blogs</a>
+              </div>
+              <div class="login">
+                <a href="http://127.0.0.1:5500/UI/login.html">Login</a>
+              </div>
+              
+            </div>
+        </div>
+        <div class="body">
+            <div class="heading">
+               <h2>The most popular stories</h2> 
+                <button id="newArt">Create new article</button>
+                <i class="fa fa-bell fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="card">
+                1.HTML Documents &nbsp;&nbsp; <button class="cardbtn" id="card1btn" >Read more</button><br><br>
+                <div class="fullStory">
+                    <p class="blog1">All HTML documents must start with a document type declaration: <!DOCTYPE html>.The HTML document itself begins with <html>
+                        and ends with </html>.The visible part of the HTML document is between <body> and </body>.The <!DOCTYPE> declaration
+                        represents the document type,and helps browsers to display web pages correctly.t must only appear once, at the top of the page
+                        (before any HTML tags).The <!DOCTYPE> declaration is not case sensitive.
+                    
+                    The link's destination is specified in the href attribute.Attributes are used to provide additional information about HTML elements.
+                    You will learn more about attributes in a later chapter. HTML images are defined with the <img> tag.The source file (src), alternative
+                        text (alt), width, and height are provided as attributes
+                    </p><br>
+                    <div class="footer">
+                        <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                    </div><br>
+
+                </div><br>
+
+
+                2.JavaScript as the world's most popular programming language.&nbsp;&nbsp;  <button class="cardbtn" id="card2btn" >Read more</button><br><br>
+                <div class="full2Story">
+                    <p class="blog2">JavaScript is the world's most popular programming language.<br>
+                        JavaScript is the programming language of the Web.
+                        JavaScript <br>is easy to learn.
+                        This tutorial will teach you JavaScript from basic <br>to advanced.JavaScript is one of the 3 languages all web developers must learn:
+                    <br> 1. HTML to define the content of web pages<br>
+                        2. CSS to specify the layout of web pages<br>
+                        3. JavaScript to program the behavior of web pages
+                    </p><br>
+                    <div class="footer">
+                        <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                    </div><br>
+                </div><br>
+                3.The Two Sides of Web Programming &nbsp;&nbsp;  <button class="cardbtn" id="card3btn"  >Read more</button><br><br>
+                <div class="full3Story">
+                    <p class="blog3">The average website or app user doesn’t necessarily think that much about<br>
+                    what goes on when they click a button, enter text in a box or scroll through<br>
+                    results pages. Just a little bit of typing or clicking and information
+                    appears<br> like magic. Of course, it isn’t magic. The clicking, scrolling
+                    and typing <br>you do on the visible portion of a webpage is interaction with
+                    the website’s <br>front end, or client side. All of the behind-the-scenes communication <br>
+                    between different servers to retrieve and display information happens on the<br>
+                        back end, or server side. PHP, a back-end language, isn’t about making things <br>
+                        look nice the way front-end languages like CSS are.
+                    </p><br>
+                    <div class="footer">
+                        <i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-comment fa-2x" aria-hidden="true"></i>
+                        <i class="fa fa-share-alt fa-2x" aria-hidden="true"></i>
+                    </div><br>
+                </div><br>
+            </div>
+            <form id="formp">
+                <input type="text" placeholder="Enter your password"><br><br>
+                <button>Submit</button>
+            </form><br>
+            <div class="blogForm">
+                <form >
+                    <h2>Create new article</h2><br>
+                    <div class="title">
+                        <label for="text">Title:</label>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="Author">
+                        <label for="text">Author:</label>
+                        <input type="text">
+                    </div><br><br>
+                    <div class="contents">
+                        <textarea name="content" id="content" cols="30" rows="10"> contents...</textarea>
+                    </div>
+                    <button id="create">Create</button><br><br>
+                </form><br>
+            </div><br>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
