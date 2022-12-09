@@ -1,11 +1,139 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+@media only screen and (min-width: 290px){
+    .header{
+         padding-top: 10px;
+         background-color: #397130;
+         display: flex;
+         flex-direction: row;
+         gap: 8%;
+    }
+    #tparf{
+        padding-left: 10px;
+        padding-top: 5px;
+        font-size: 17px;
+    }
+    .righthead{
+        display: flex;
+        flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+        padding-top: 10px;
+    }
+    .righthead a{
+        color: white;
+        text-decoration: none;
+        display: flex;
+        font-size: 12px;
+        font-family: sans-serif;
+    }
+    .leftbody{
+        border-right: 10px solid rgba(102, 99, 99,.5);
+        padding-top: 20%;
+        margin-top: 5px;
+       background-repeat: no-repeat;
+       background-size: 100%;
+        background-image: url(../assets/images/myPhoto.PNG);
+        border-radius: 5px;
+    }
+    .body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1%;
+        background-color: rgba(255, 255,0,.1);
+        height: 600px;
+    }
+    span{
+        font-weight: bold;
+    }
+    .rightbody{
+        font-weight: 500;
+        background-color: rgb(79, 128, 0);
+        padding-left: 3%;
+        
+    }
+}
+
+
+@media only screen and (min-width: 500px){
+    
+}
+
+
+/* @media only screen and (min-width: 498px){
+    .container{
+        width: 100%;
+    }
+    .header{
+         gap: 12%;
+    }
+    #tparf{
+        font-size: 20px;
+    }
+    .righthead{
+        min-width: 60vw;
+        gap: 10px;
+    }
+
+} */
+
+/* @media only screen and (min-width: 530px){
+    .container{
+        width: 100%;
+        background-image: url(../assets/images/home2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .header{
+         height: 55px;
+         gap: 10%;
+    }
+    .righthead{
+        display: flex;
+        flex-direction: row;
+        gap: 17px;
+    }
+    
+    .leftbody{
+        box-shadow: 40px 0px 16px gray ;
+        border-right: 10px solid rgba(102, 99, 99,.5);
+
+       background-repeat: no-repeat;
+       background-size: 100%;
+        border-radius: 5px;
+    }
+    .rightbody{
+        font-weight: 500;
+        background-image: url(../assets/images/home2.jpg);
+        background-size: cover;
+        padding-left: 3%;
+        
+    }
+   
+    .body{
+       display: grid;
+       grid-template-columns: 1fr 2fr;
+       margin-top: 12px;
+    }
+   
+
+
+} */
+
+
+
+
+/* @media only screen and (min-width: 1250px){
+
 .header{
    margin-top: 10px;
     background-color: #397130;
-    display: grid;
-    grid-template-columns: 1.4fr 2fr;
+    display: flex;
+    flex-direction: row;
+    gap: 28%;
     height: 70px;
 }
 .righthead a{
@@ -52,7 +180,7 @@
 }
 
 .body{
-    /* padding-top: 60px; */
+
     padding-left: 30px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -67,3 +195,87 @@
     font-size: 1.4rem;
     
 }
+}
+
+
+@media only screen and (max-width: 1250px){
+
+} */
+
+
+
+@media only screen and (min-width: 1250px){
+
+    .header{
+       margin-top: 10px;
+        background-color: #397130;
+        display: flex;
+        flex-direction: row;
+        gap: 28%;
+        height: 70px;
+    }
+    .righthead a{
+        color: white;
+        text-decoration: none;
+        grid-gap: 20px;
+        font-family: sans-serif;
+    }
+    .righthead{
+        display: flex;
+        flex-direction: row;
+        grid-gap: 60px;
+        padding-top: 20px;
+    }
+    .leftbody a{
+        text-decoration: none;
+        color: white;
+    }
+    .leftbody img{
+     
+        height: 360px;
+        width: 340px;
+        border-radius: 100%;
+    }
+    .leftbody{
+        box-shadow: 40px 0px 16px gray ;
+        border-right: 10px solid rgba(102, 99, 99,.5);
+        padding-top: -40px;
+       background-repeat: no-repeat;
+       background-size: cover;
+        background-image: url(../assets/images/myPhoto.PNG);
+        border-radius: 5px;
+    }
+    
+    #tparf{
+        padding-left: 70px;
+        padding-top: 17px;
+    }
+    .container{
+        background-image: url(../assets/images/home2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    }
+    
+    .body{
+    
+        padding-left: 30px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        background-color: rgba(255, 255,0,.1);
+       
+        height: 600px;
+    }
+    .rightbody{
+        padding-top: 60px;
+        padding-left: 50px;
+        font-weight: 900;
+        font-size: 1.4rem;
+        
+    }
+    }
+    
+    
+    @media only screen and (max-width: 1250px){
+    
+    }
