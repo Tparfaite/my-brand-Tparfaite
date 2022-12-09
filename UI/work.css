@@ -1,7 +1,186 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header{
+
+@media screen and (min-width: 320px){
+    .container{
+        width: 100%;
+    }
+    .header{
+        background-color: #397130;
+        display: flex;
+        flex-direction: row;
+    }
+    .lefthead{
+        display: none;
+    }
+    .righthead{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12%;
+    }
+    .righthead a{
+        color: white;
+        text-decoration: none;
+        font-family: sans-serif;
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    .wbody h2, .wbody h1{
+        padding-left: 50px;
+    }
+    .mywork p{
+        padding-left: 35px;
+    }
+    .projects{
+        background-color: rgb(123, 146, 146);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-left: 25px;
+    }
+    #project img, #project2 img{
+       height: 100px;
+    }
+    .projects a{
+        margin-left: 30px; 
+        text-decoration: none;
+        color: white;
+        background-color: black;
+     }
+
+   
+}
+
+
+
+@media screen and (min-width: 480px){
+    .container{
+        width:100%;
+    }
+    .header{
+        height: 50px;
+    }
+    .righthead{
+        padding-top: 12px;
+       display: grid;
+       grid-template-columns: 1fr 1.1fr 1fr 1fr 1.2fr 1fr 1fr;
+       grid-gap: 18px;
+   }
+   .righthead a{
+    padding-left: 10px;
+    font-size: 10px;
+  }
+  .mywork p{
+    font-size: 18px;
+  }
+ 
+
+ }
+
+
+
+ @media screen and (min-width: 720px){
+    .container{
+        width:100%;
+    }
+    .lefthead{
+        display: contents;
+       
+    }
+    #tparf{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    .wbody .mywork{
+       margin-left: 60px;
+       padding-left: 10px;
+       width: 80%;
+      
+    }
+    .mywork p{
+        font-size: 20px;
+      }
+    .wbody h2{
+      padding-left: 300px;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+    .righthead a{
+        font-size: 15px;
+    }
+    #project img, #project2 img{
+        height: 150px;
+     }
+
+}
+
+
+@media screen and (min-width: 1000px){
+    .projects{
+        gap: 45px;
+    }
+    .righthead a{
+        font-size: 16px;
+        gap: 120px;
+    }
+    .header{
+        gap: 200px;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px){
+    #project img, #project2 img{
+        padding-top: 40px;
+        padding-left: 30px;
+        height: 220px;
+       
+    }
+    .projects{
+        gap: 35px;
+        height: 450px;
+    }
+    .header{
+        gap: 500px;
+    }
+
+}
+
+
+@media screen and (min-width: 1350px){
+    .header{
+        gap: 700px;
+    }
+
+}
+
+@media screen and (min-width: 1550px){
+    .header{
+        gap: 800px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .header{
    margin-top: 10px;
     background-color: #397130;
     display: grid;
@@ -59,4 +238,4 @@ font-family: sans-serif;
 h2{
     padding-left: 350px;
     padding-top: 30px;
-}
+} */
