@@ -57,7 +57,13 @@
     }
 }
 
-@media only screen and (min-width: 498px){
+
+@media only screen and (min-width: 500px){
+    
+}
+
+
+/* @media only screen and (min-width: 498px){
     .container{
         width: 100%;
     }
@@ -72,9 +78,9 @@
         gap: 10px;
     }
 
-}
+} */
 
-@media only screen and (min-width: 530px){
+/* @media only screen and (min-width: 530px){
     .container{
         width: 100%;
         background-image: url(../assets/images/home2.jpg);
@@ -115,7 +121,7 @@
    
 
 
-}
+} */
 
 
 
