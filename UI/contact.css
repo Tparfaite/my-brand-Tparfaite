@@ -46,9 +46,6 @@
         flex-direction: column;
         gap: 40px;
     }
-    .form input[type=text]{
-        outline: none;
-    }
     .leftbody a{
         color: white;
         text-decoration: none;
@@ -153,6 +150,42 @@
         gap: 60px;
     }
 
+}
+
+@media only screen and (min-width: 755px){
+    .header{
+        height: 60px;
+        gap: 160px;
+    }
+    .righthead{
+        grid-gap: 18px;
+    }
+    .rightbody{
+        padding-top: 35px;
+    }
+    .body{
+        padding-left: 30px;
+        gap: 230px;
+        padding-left: 80px;
+    }
+    
+}
+@media only screen and (min-width: 890px){
+    .header{
+        gap: 250px;
+    }
+    #tparf{
+        font-size: 25px;
+        padding-left: 20px;
+    }
+    .rightbody{
+        font-size: 22px;
+    }
+    .body{
+        padding-left: 30px;
+        gap: 230px;
+        padding-left: 80px;
+    }
 }
 
 
