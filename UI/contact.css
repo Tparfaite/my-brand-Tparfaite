@@ -165,7 +165,7 @@
     }
     .body{
         padding-left: 30px;
-        gap: 230px;
+        gap: 120px;
         padding-left: 80px;
     }
     
@@ -183,8 +183,20 @@
     }
     .body{
         padding-left: 30px;
-        gap: 230px;
+        gap: 130px;
         padding-left: 80px;
+    }
+}
+
+@media only screen and (min-width: 990px){
+    .righthead a{
+        font-size: 16.5px;
+    }
+    #tparf{
+        padding-left: 25px;
+    }
+    .header{
+        gap: 280px;
     }
 }
 
