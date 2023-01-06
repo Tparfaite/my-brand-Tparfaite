@@ -33,39 +33,56 @@
     }
     #login{
         margin-left: 20px;
-        color: yellow;
+        color: black;
+        text-decoration: underline;
     }
     .formpart{
-        background-image: url(../assets/images/backgroundImage.webp);
+        background-image: url(../assets/images/contact2.jpg);
         background-size: cover;
         height: 700px;
     }
     .form2{
-        background-color:rgb(40, 141, 207);
-        color: black;
-        height: 320px;
+        background-color: #352E20;
+        color: white;
+        font-size: 18px;
+        height: auto;
         width: 300px;
         margin-left: 10px;
         padding-left: 30px;
-        padding-top: 30px;
+        padding-top: 10px;
         margin-top: 50px;
         border-radius: 5px;
         opacity: 1;
     }
+    .signup p{
+        font-size: 18px;
+    }
+    .signup p a{
+        color: #057417;
+        text-decoration: none;
+        font-size: 25px;
+    }
+    .form2 label{
+        padding-left: 70px;
+    }
     .form2 button{
         color: white;
-        background-color: green;
+        font-size: large;
+        font-weight: bold;
+        background-color: #397130;
         border: none;
         border-radius: 5px;
         height: 30px;
-        width: 167px;
-        margin-left: 30px;
+        width: 160px;
     }
     .form2 input{
         height: 40px;
         width: 250px;
         border-radius: 5px;
         border: none;
+    }
+    small{
+        visibility: hidden;
     }
 
 }
@@ -110,6 +127,10 @@
     .form2{
       margin-left: 90px;
     }
+    .form2 input[type=text], .form2 input[type=email], .form2 input[type=password]{
+        padding-left: 20px;
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width: 564px){
@@ -124,6 +145,12 @@
     }
     #login{
         margin-left: 140px;
+    }
+    .signup p{
+        font-size: 22px;
+    }
+    .signup p a{
+        font-size: 35px;
     }
 }
 
@@ -162,6 +189,15 @@
     #login, .form2{
         margin-left: 220px;
     }
+    .form2{
+        font-size: 25px;
+        margin-left: 300px;
+       
+    }
+    .form2 label{
+        padding-left: 70px;
+    }
+  
 }
 
 @media screen and (min-width: 970px){
@@ -170,8 +206,8 @@
     }
     .form2{
         margin-left: 320px;
-        height: 350px;
-        padding-top: 50px;
+      
+        padding-top: 30px;
         width: 400px;
     }
     .form2 input{
@@ -186,6 +222,10 @@
     .header{
         gap: 200px;
     }
+    .form2 label{
+        padding-left: 100px;
+    }
+   
 }
 
 @media screen and (min-width: 1150px){
@@ -200,13 +240,16 @@
     }
     .form2{
         margin-left: 400px;
-        height: 420px;
+      
         width: 400px;
-        padding-top: 70px;
+        padding-top: 20px;
     }
     #login{
         margin-left: 400px;
         padding-top: 40px;
+    }
+    .form2 label{
+        padding-left: 110px;
     }
 }
 
@@ -234,6 +277,12 @@
     }
     .righthead a{
         font-size: 18px;
+    }
+    .form2{
+        margin-left: 570px;
+    }
+    #login{
+        margin-left: 570px;
     }
 }
 

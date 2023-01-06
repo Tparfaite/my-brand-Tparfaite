@@ -44,14 +44,14 @@
         padding-left: 25px;
         padding-top: 5px;
         grid-gap: 45px;
-        background-color: #6F9B79;
+        background-color: #327266;
        }
        #emoji{
         display: none;
        }
        .summary{
         padding-left: 10px;
-        background-color: #6F9B79;
+        background-color: #327266;
        }
 }
 
@@ -147,7 +147,7 @@
          padding-left: 70px;
          padding-top: 20px;
          gap: 50px;
-         background-color:#6F9b79;
+         background-color: #327266;
          margin-top: 40px;
      }
      .summary p{

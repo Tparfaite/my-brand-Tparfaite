@@ -137,7 +137,7 @@ font-family: sans-serif;
 @media screen and ( max-width:1239px){
 .container{
     width: 100%;
-    border: 3px solid red;
+    
 }
 .righthead{
     gap: 40px;

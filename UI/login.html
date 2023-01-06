@@ -42,13 +42,22 @@
         <h2 id="login">Reserved for Admin to Login</h2>
         <div class="form2">
             <label for="text">Username</label><br>
-            <input type="text"><br><br>
+            <input type="text" id="username">
+            <small id="errorUser"></small><br>
             <label for="">Password</label><br>
-            <input type="password"><br><br>
-            <button type="submit" >Login</button>
+            <input type="password" id="pass">
+            <small id="errorpass"></small><br><br>
+            <button type="submit" id="submit2" >Login</button><br><br>
+           <div class="signup">
+            <p>Don't have an account? 
+                 <a href="signup.html">Signup</a>
+            </p><br><br>
+           </div>
         </div>
     </div>
-     </div>   
+     </div>  
+     <!-- <script src="signup.js"></script> -->
+     <script src="login.js"></script>  
     
 </body>
 </html>

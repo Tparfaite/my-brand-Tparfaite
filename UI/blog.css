@@ -14,19 +14,16 @@
     background-image: url(../assets/images/contact2.jpg);
     background-size: cover;
     height: auto;
-    /* height: 700px; */
 }
 .heading{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.1fr;
     padding-top: 20px;
 }
 .heading h2{
     padding-left: 25px;
     color: #000000;
     font-weight: 400;
-}
-.heading{
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 0.1fr;
 }
 .heading #newArt{
     width: 180px;
@@ -54,21 +51,51 @@ font-family: sans-serif;
     padding-top: 17px;
 }
 .fa-bell{
-    background-color: white;
    margin-right: 60px;
    margin-bottom: 30px;
+}
+p a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+p a:hover {
+    color: rgb(236, 6, 6);
+    text-decoration: underline;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    margin-left: 70px;
+    width: 90%;
+    /* height: 100vh; */
+}
+.card1, .card2, .card3, .card4{
+    background-color: #327266;
+    color: white;
+    height: auto;
+    width: 550px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 .card{
     background-color: #327266;
     color: white;
     height: auto;
-    width: 550px;
-    margin-left: 30px;
+    width: 80%;
     border-radius: 5px;
-    padding-left: 20px;
+    padding-left: 40px;
     padding-top: 20px;
+    margin: auto;
+    margin-top: 30px;
 }
-.card button{
+.card ol{
+    padding-left: 40px;
+}
+
+.cards button{
     background-color: #327266;
     border: none;
 }
@@ -83,16 +110,11 @@ font-family: sans-serif;
     gap: 20px;
     padding-left: 60px;
 }
-.fullStory, .full2Story, .full3Story{
-    display: none;
-}
-.card .blog1Display{
+
+.cards .blog1Display{
     display: contents;
  }
-.footer i{
-background-color: white;
-height: 30px;
-}
+
 #formp{
     background-color: black;
     height: 200px;

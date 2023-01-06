@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-image: url("../assets/images/contact2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+.navbar{
+    background-color:#397130 ;
+    height: 60px;
+   
+}
+.navleft{
+    float: left;
+    
+}
+.navleft h3{
+    font-size: 32px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.navright{
+    float: right;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 20%;
+}
+.navright a{
+    text-decoration: none;
+    color: white;
+    padding-top: 15px;
+    font-size: larger;
+}
+form{
+    padding-top: 20px;
+    padding-left: 70px;
+    margin-left: 170px;
+    width: 30%;
+    background-color:#352E20 ;
+    color: white;
+    height: auto;
+    border-radius: 5px;
+}
+textarea{
+    border-radius: 5px;
+}
+form input[type=text]{
+    border-radius: 5px;
+    height: 30px;
+    width: 250px;
+}
+form button{
+    background-color: #397130;
+    color: white;
+    font-size: 22px;
+    border: none;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+
