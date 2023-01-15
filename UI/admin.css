@@ -3,11 +3,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    height: auto;
+}
+.card1{
+    background-color: #327266;
+    color: white;
+   min-height: 400px;
+    width: 80%;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-top: 20px;
+    margin: auto;
+    margin-top: 30px;
+}
 .container{
     background-image: url("../assets/images/contact2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: auto;
 }
 .navbar{
     background-color:#397130 ;
@@ -39,14 +53,16 @@ form{
     padding-top: 20px;
     padding-left: 70px;
     margin-left: 170px;
-    width: 30%;
-    background-color:#352E20 ;
+    width: 75%;
+    background-color:#327266 ;
     color: white;
     height: auto;
     border-radius: 5px;
 }
-textarea{
+.contents{
     border-radius: 5px;
+    margin-right: 30px;
+
 }
 form input[type=text]{
     border-radius: 5px;
@@ -61,6 +77,19 @@ form button{
     width: 250px;
     height: 35px;
     border-radius: 5px;
+}
+#delete ,#update{
+    background-color:#397130 ;
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    height: 40px;
+    width: 90px;
+    border: none;
+}
+#paragraph{
+    font-size: 20px;
+    font-family: monospace;
 }
 
 

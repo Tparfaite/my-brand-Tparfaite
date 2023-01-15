@@ -201,7 +201,8 @@ font-family: sans-serif;
         width: 100%;
     }
     .header{
-        gap: 3%;
+        gap: 4%;
+        height: 80px;
     }
     .righthead{
         gap: 5px;
@@ -210,7 +211,8 @@ font-family: sans-serif;
         font-size: 10px;
     }
     .body{
-        background-color: #06739e;
+        background-color: #327266;
+        color: white;
         display: flex;
         flex-direction: column-reverse;
         gap: 15px;
