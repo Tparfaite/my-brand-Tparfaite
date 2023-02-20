@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+   
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
+    <!-- <script>
+        tinymce.init({
+          selector: '#mytextarea'
+        });
+      </script> -->
+    <title>Admin panel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+          <div class="navleft">
+            <h3>Tparfaite</h3>
+          </div>
+          <div class="navright">
+            <a href="../index.html">Home</a>
+            <a href="blog.html">Blogs</a>
+            <a href="login.html">Logout</a>
+          </div>
+        </div><br><br>
+       
+        <form class="blogForm" method="POST">
+            <h2>Create new blog</h2><br><br>
+            <div class="title" id="title">
+                <label for="text">Blog title</label><br>
+                <input type="text" name="title" id="tit">
+            </div><br>
+            <div class="author" id="author" >
+                <label for="text">Blog author</label><br>
+                <input type="text" name="author" id="aut">
+            </div><br>
+            <div class="contents" id="content">
+                <label for="">Blog content</label><br>
+                <textarea name="blogs" id="myTextarea" cols="100" rows="30"></textarea>
+            </div><br>
+            <button id="create">Create</button><br><br>
+        </form>
+        <div class="cards">
+      
+        </div>
+    </div><br><br>
+   
+    <script src="admin.js"></script>
+   
+</body>
+</html>

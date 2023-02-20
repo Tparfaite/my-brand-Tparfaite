@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 320px){
+    .container{
+        height: auto;
+        width: 100%;
+    }
+    .header{
+        background-color: #397130;
+        display: flex;
+        flex-direction: row;
+    }
+    .lefthead{
+        display: none;
+    }
+    .righthead{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12%;
+    }
+    .righthead a{
+        color: white;
+        text-decoration: none;
+        font-family: sans-serif;
+        padding-left: 5px;
+        font-size: 10px;
+    }
+    #login{
+        margin-left: 20px;
+        color: black;
+        text-decoration: underline;
+    }
+    .formpart{
+        background-image: url(../assets/images/contact2.jpg);
+        background-size: cover;
+        height: 700px;
+    }
+    .form2{
+        background-color: #352E20;
+        color: white;
+        font-size: 18px;
+        height: auto;
+        width: 300px;
+        margin-left: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
+        margin-top: 50px;
+        border-radius: 5px;
+        opacity: 1;
+    }
+    .signup p{
+        font-size: 18px;
+    }
+    .signup p a{
+        color: #057417;
+        text-decoration: none;
+        font-size: 25px;
+    }
+    .form2 label{
+        padding-left: 70px;
+    }
+    .form2 button{
+        color: white;
+        font-size: large;
+        font-weight: bold;
+        background-color: #397130;
+        border: none;
+        border-radius: 5px;
+        height: 30px;
+        width: 160px;
+    }
+    .form2 input{
+        height: 40px;
+        width: 250px;
+        border-radius: 5px;
+        border: none;
+    }
+    small{
+        visibility: hidden;
+    }
+
+}
+
+
+@media screen and (min-width: 360px){
+    .form2{
+        margin-left: 30px;
+    }
+    .righthead a{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 400px){
+    .form2{
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .container{
+        width:100%;
+    }
+    .header{
+        height: 50px;
+    }
+    .righthead{
+        padding-top: 12px;
+       display: grid;
+       grid-template-columns: 1fr 1.1fr 1fr 1fr 1.2fr 1fr 1fr;
+       grid-gap: 18px;
+   }
+   .righthead a{
+      padding-left: 10px;
+      font-size: 10px;
+    }
+    #login{
+    margin-left: 90px;
+    padding-top: 20px;
+    }
+    .form2{
+      margin-left: 90px;
+    }
+    .form2 input[type=text], .form2 input[type=email], .form2 input[type=password]{
+        padding-left: 20px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 564px){
+    .form2{
+        margin-left: 140px;
+    }
+    .righthead a{
+        font-size: 12px;
+    }
+    .righthead{
+        grid-gap: 21px;
+    }
+    #login{
+        margin-left: 140px;
+    }
+    .signup p{
+        font-size: 22px;
+    }
+    .signup p a{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 630px){
+    .lefthead{
+        display:contents;
+    }
+    #tparf{
+        padding-left: 12px;
+        padding-top: 15px;
+    }
+    .header{
+        gap: 80px;
+    }
+    .righthead a{
+        font-size: 10px;
+    }
+    .righthead{
+        grid-gap: 11px;
+    }
+    #login, .form2{
+        margin-left: 170px;
+    }
+}
+
+@media screen and (min-width: 770px){
+    .righthead a{
+        font-size: 12px;
+    }
+    .righthead{
+        grid-gap: 11px;
+    }
+    .header{
+        gap: 150px;
+    }
+    #login, .form2{
+        margin-left: 220px;
+    }
+    .form2{
+        font-size: 25px;
+        margin-left: 300px;
+       
+    }
+    .form2 label{
+        padding-left: 70px;
+    }
+  
+}
+
+@media screen and (min-width: 970px){
+    #login{
+      margin-left: 320px;
+    }
+    .form2{
+        margin-left: 320px;
+      
+        padding-top: 30px;
+        width: 400px;
+    }
+    .form2 input{
+        width: 350px;
+    }
+    .righthead a{
+        font-size: 15px;
+    }
+    .righthead{
+        grid-gap: 22px;
+    }
+    .header{
+        gap: 200px;
+    }
+    .form2 label{
+        padding-left: 100px;
+    }
+   
+}
+
+@media screen and (min-width: 1150px){
+    .righthead a{
+        font-size: 15px;
+    }
+    .righthead{
+        grid-gap: 22px;
+    }
+    .header{
+        gap: 380px;
+    }
+    .form2{
+        margin-left: 400px;
+      
+        width: 400px;
+        padding-top: 20px;
+    }
+    #login{
+        margin-left: 400px;
+        padding-top: 40px;
+    }
+    .form2 label{
+        padding-left: 110px;
+    }
+}
+
+@media only screen and (min-width: 1170px){
+    .righthead {
+        padding-top: 20px;
+        gap: 25px;
+    }
+    .righthead a{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 1340px){
+    .header{
+        height: 70px;
+        gap: 460px;
+    }
+    .righthead {
+        gap: 30px;
+    }
+    #tparf{
+        padding-left: 40px;
+        font-size: 30px;
+    }
+    .righthead a{
+        font-size: 18px;
+    }
+    .form2{
+        margin-left: 570px;
+    }
+    #login{
+        margin-left: 570px;
+    }
+}
+
+
+
+
