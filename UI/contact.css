@@ -8,7 +8,7 @@
 @media screen and (min-width: 320px) {
     .container{
         width: 100%;
-        background-image: url(../assets/images/contact2.jpg);
+        background-image: url(../assets/images/contactim.gif);
         background-size: cover;
     }
 
@@ -152,57 +152,8 @@
 
 }
 
-@media only screen and (min-width: 755px){
-    .header{
-        height: 60px;
-        gap: 160px;
-    }
-    .righthead{
-        grid-gap: 18px;
-    }
-    /* .rightbody{
-        padding-top: 35px;
-    } */
-    .body{
-        padding-left: 30px;
-        gap: 120px;
-        padding-left: 80px;
-    }
-    
-}
-@media only screen and (min-width: 890px){
-    .header{
-        gap: 250px;
-    }
-    #tparf{
-        font-size: 25px;
-        padding-left: 20px;
-    }
-    .rightbody{
-        font-size: 22px;
-    }
-    .body{
-        padding-left: 30px;
-        gap: 130px;
-        padding-left: 80px;
-    }
-}
-
-@media only screen and (min-width: 990px){
-    .righthead a{
-        font-size: 16.5px;
-    }
-    #tparf{
-        padding-left: 25px;
-    }
-    .header{
-        gap: 280px;
-    }
-}
-
 
 @media (min-width: 1080px){
-   
 
     .container{
         width: 100%;
@@ -233,7 +184,7 @@
         margin-left: 40px;
         width: 95%;
         margin-top: 60px;
-        gap: 15%;
+        gap: 18%;
     }
     .form{
         width: 340px;
@@ -247,8 +198,8 @@
         padding-top: 30px;
         font-size: 14px;
         border-radius: 8px;
-        width: 340px;
-        height: 440px;
+        width: 600px;
+        height: 350px;
     }
     .leftbody p{
         font-size: 18px;
@@ -268,13 +219,7 @@
     textarea{
         height: 70px;
         width: 230px;
-        border-radius: 5px;
     }
-    /* .cbody{
-        background-color: red;
-        height: 80px;
-        border: 3px solid red;
-    } */
 
 }
 
