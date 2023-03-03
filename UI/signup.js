@@ -2,7 +2,7 @@ const formpart=document.getElementsByClassName("formpart")[0];
 const form2=document.getElementById("form2");
 const fname=document.getElementById("fname");
 const lname=document.getElementById("lname");
-const emails=document.getElementById("email");
+const emails=document.getElementById("emails");
 const passwords=document.getElementById("password");
 const submit=document.getElementById("submit");
 

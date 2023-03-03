@@ -1,54 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="admin.css">
-   
-    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
-    <!-- <script>
-        tinymce.init({
-          selector: '#mytextarea'
-        });
-      </script> -->
-    <title>Admin panel</title>
-</head>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="admin.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
+      <!-- <script>
+          tinymce.init({
+            selector: '#mytextarea'
+          });
+        </script> -->
+      <title>Admin panel</title>
+  </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-          <div class="navleft">
-            <h3>Tparfaite</h3>
-          </div>
-          <div class="navright">
-            <a href="../index.html">Home</a>
-            <a href="blog.html">Blogs</a>
-            <a href="login.html">Logout</a>
-          </div>
-        </div><br><br>
-       
-        <form class="blogForm" method="POST">
-            <h2>Create new blog</h2><br><br>
+  <div class="container">
+    <div class="navbar">
+      <div class="navleft">
+        <h3>Tparfaite</h3>
+      </div>
+      <div class="navright">
+        <a href="../index.html">Home</a>
+        <a href="blog.html">Blogs</a>
+        <a href="login.html">Logout</a>
+      </div>
+    </div><br><br>
+
+    <div class="body">
+      <div class="dashboard">
+        <h2>Admin dashboard</h2><br>
+        <ul>
+          <li><a href="../index.html">Home</a></li><br>
+          <li><a href="login.html">Logout</a></li><br>
+          <li><a href="">Blogs</a></li><br>
+          <li><a href="">Users</a></li><br>
+          <li><a href="">Messages</a></li>
+        </ul>
+      </div>
+      <div class="bodyRight">
+        <div class="blogTable" id="blogTable">
+          <a href="" id="blogs">Blogs</a>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Blog no</th>
+                <th>Blog Title</th>
+                <th>Blog author</th>
+                <th>Delete</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> -->
+            </tbody><br><br>
+          </table>
+        </div><br>
+
+        <div class="allUsers" id="allUser">
+          <a href="" id="allUsers">All users</a>
+          <table border="1">
+            <thead>
+              <th>User no</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tbody">
+              <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div><br>
+
+
+        <div class="messages">
+          <a href="" id="messages">Messages</a>
+          <table border="1">
+            <thead>
+              <th>Message no</th>
+              <th>Email</th>
+              <th>Fullname</th>
+              <th>Message</th>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div><br>
+
+        <div class="cards">
+          <form class="blogForm">
+            <h2>Create new blog</h2><br>
             <div class="title" id="title">
-                <label for="text">Blog title</label><br>
-                <input type="text" name="title" id="tit">
+              <label for="text">Blog title</label><br>
+              <input type="text" name="title" id="tit">
             </div><br>
-            <div class="author" id="author" >
-                <label for="text">Blog author</label><br>
-                <input type="text" name="author" id="aut">
+            <div class="author" id="author">
+              <label for="text">Blog author</label><br>
+              <input type="text" name="author" id="aut">
+            </div><br>
+            <div class="blogImage">
+              <label for="image">Blog image</label>
+              <input id="photo" type="file" name="myImage" accept="image/png,image/jpeg" />
             </div><br>
             <div class="contents" id="content">
-                <label for="">Blog content</label><br>
-                <textarea name="blogs" id="myTextarea" cols="100" rows="30"></textarea>
+              <label for="">Blog content</label><br>
+              <textarea name="blogs" id="myTextarea" cols="35" rows="15"></textarea>
             </div><br>
-            <button id="create">Create</button><br><br>
-        </form>
-        <div class="cards">
-      
+            <button id="create">create</button>
+          </form>
         </div>
-    </div><br><br>
+
+      </div>
+    </div>
+  </div>
    
-    <script src="admin.js"></script>
+ <script src="admin.js"></script>
    
 </body>
 </html>
