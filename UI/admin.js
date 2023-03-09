@@ -1,13 +1,50 @@
 const card=document.querySelector(".cards");
-console.log(card);
-
 const blogForm=document.querySelector(".blogForm");
 console.log(blogForm);
-
 const create=document.getElementById("create");
+const messanger=document.getElementsByClassName("messages")[0];
+// console.log(messanger);
+
 const title=document.getElementById("tit");
 const author=document.getElementById("aut");
+const photo=document.getElementById("photo");
 const content=document.getElementById("myTextarea");
+const blogLink=document.getElementById("blogLink");
+
+const userLink=document.getElementById("userLink");
+const messageLink=document.getElementById("messageLink");
+const token=localStorage.getItem('token');
+console.log(token);
+
+
+//Create Blog
+blogForm.addEventListener("submit",e=>{
+    e.preventDefault();
+
+    const formData= new FormData();
+
+    formData.append('blogTitle',title.value);
+    formData.append('blogAuthor',author.value);
+    formData.append('blogImage',photo.files[0]);
+    formData.append('blogContent',content.value);
+
+    const createBlog=async()=>{
+        const response=await (await fetch("https://my-brand-parfaite.cyclic.app/api/createBlog",{
+            method:'POST',
+            headers:{token:`Bearer ${token}`},
+            body:formData
+        })).json()
+
+        console.log(response);
+
+        if(response){
+          blogForm.reset();
+          console.log('blog created successful');
+        }
+    }
+   
+  createBlog();
+})
 
 
 
@@ -22,9 +59,10 @@ const fetchBlogs=async()=>{
     const response=await fetch("https://my-brand-parfaite.cyclic.app/api/getAllBlogs");
     const blogs=await response.json();
     let allBlogs=blogs.data.post;
-    // console.log(allBlogs);
+    blogTable.style.display="block";
+    messanger.style.display="none";
+    allUsers.style.display="none";
    
-
     const tableBody = document.querySelector('tbody');
     allBlogs.forEach((allBlogs,index)=>{
        
@@ -43,19 +81,63 @@ const fetchBlogs=async()=>{
 
 }
 
-blogs.addEventListener('click',e=>{
+blogLink.addEventListener('click',e=>{
     e.preventDefault();
     fetchBlogs();
 });
 
+
+
+//Get all messages
+const messages=document.getElementById("messages");
+
+const fetchMessages=async()=>{
+    const messagees=await fetch("https://my-brand-parfaite.cyclic.app/api/getAllMessages",{
+        headers:{token:`Bearer ${token}`}
+    });
+    const response=await messagees.json();
+    const results=response.data.posts;
+    messanger.style.display="block";
+    blogTable.style.display="none";
+    allUsers.style.display="none";
+   
+    console.log(results);
+
+    const tableMessages=document.getElementById('tableMessages');
+  
+    results.map((result,index)=>{
+
+        tableMessages.innerHTML += `
+        
+        <tr>
+        <td>${index + 1}</td>
+        <td>${result.email}</td>
+        <td>${result.fullName}</td>
+        <td>${result.message}</td>
+        <td><i class="fa fa-trash" aria-hidden="true" data-message-id=${result._id}></i></td>
+       </tr>
+        `;
+    });
+
+}
+messageLink.addEventListener("click",e=>{
+    e.preventDefault();
+    fetchMessages();
+})
+
+
+
 // AllUsers
-const allUsers=document.getElementById("allUsers");
+const allUsers=document.getElementsByClassName("allUsers")[0];
 
 const fetchAllUsers=async()=>{
     const result=await fetch("https://my-brand-parfaite.cyclic.app/api/getAllUsers");
     const users=await result.json();
     let allUser=users.message.post;
-    // console.log(allUser);
+    allUsers.style.display="block";
+    blogTable.style.display="none";
+    messanger.style.display="none";
+   
     
     const tableBodyUsers = document.getElementById('tbody');
     allUser.forEach((allUser,index)=>{
@@ -71,51 +153,68 @@ const fetchAllUsers=async()=>{
         `;
    
     })
-    deleteUser();
+ 
 }
 
 
-const deleteUser=()=>{
-   const deleteIcon=document.querySelectorAll('.fa-trash');
-   const deleteIconArr=Array.from(deleteIcon);
-   deleteIconArr.map((icon)=>{
-   icon.addEventListener("click",e=>{
-    e.preventDefault();
-    const userId=e.target.dataset.userId;
-    
-    const deleteUserById=async()=>{
-        const deletedUser=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteUser ${userId}`,{method:'DELETE',
-      headers:{'content-Type':'application/json',token:`Bearer ${token}`}
-    })
-    }
-   })
-   })
-  
-}
-
-
-
-// const deleteButton = tableBodyUsers.querySelector('button');
-//         deleteButton.addEventListener("click",e=>{
-//             e.preventDefault();
-//             fetch(`https://my-brand-parfaite.cyclic.app/api/deleteUser/${post._id}`,{
-//                 method:"DELETE"
-//             }).then(()=>tableBodyUsers.remove())
-//             .catch(error=>console.error(error));
-            
-//     });
-
-
-
-
-
-
-allUsers.addEventListener("click",e=>{
+userLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchAllUsers();
-    
-   
+ 
 })
+
+
+
+//Create blogs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Delete user
+
+// const deleteUser=()=>{
+//     const deleteIcon=document.querySelectorAll('.fa-trash');
+//     const deleteIconArr=Array.from(deleteIcon);
+//     deleteIconArr.map((icon)=>{
+//         icon.addEventListener("click",e=>{
+//             e.preventDefault();
+//             const userId=e.target.dataset.userId;
+//             console.log(userId);
+
+//             const deleteUserById=async()=>{
+//                 const deletedUser=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteUser_id${userId}`,{
+//                     method:"DELETE",
+//                     headers:{'content-Type':'application/json',token:`Bearer ${token}`}
+//                 })
+//                 console.log(deletedUser);
+//             }
+//             deleteUserById();
+//         })
+//     })
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -145,9 +244,9 @@ allUsers.addEventListener("click",e=>{
 
 
 // const blogData=()=>{
-//     const blogTitle=title.value;
-//     const blogAuthor=author.value;
-//     const blogContent=content.value;
+//     const blogTitle=title;
+//     const blogAuthor=author;
+//     const blogContent=content;
 
 //     const blog={
 //         blogTitle,

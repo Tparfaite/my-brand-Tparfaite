@@ -14,6 +14,12 @@
         grid-template-columns: 0.5fr 2fr;
         gap: 10px;
     }
+   
+    .blogImage{
+        max-width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+    }
     .lefthead{
         padding-left: 0px;
     }
@@ -31,9 +37,11 @@
 
     }
     .container{
-        background-image: url(../assets/images/contact2.jpg);
+        /* background-image: url(../assets/images/contact2.jpg); */
         background-size: cover;
         height: auto;
+        max-width: 100%;
+        
     }
     #tparf{
       font-size: 15px;
@@ -45,26 +53,37 @@
         margin-left: 5px;
         width: 90%;
     }
-    .card1, .card2, .card3, .card4{
-        background-color: #327266;
-        color: white;
-        height: auto;
-        width: 280px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-top: 20px;
+    .blogImage {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        overflow: hidden;
     }
+      
+    .blogImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+   
     .card{
         background-color: #327266;
         color: white;
         height: auto;
-        width: 80%;
+        width: 50%;
         border-radius: 5px;
         padding-left: 40px;
         padding-top: 20px;
+        /* margin-left: 10px; */
         margin: auto;
         margin-top: 30px;
+        
     }
+    .blogCard{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+   
     p a{
         text-decoration: none;
         color: black;
@@ -85,6 +104,7 @@
         padding-top: 10px;
         gap: 12px;
     }
+    
    
 }
 
@@ -229,6 +249,10 @@
     padding-left: 30px;
     color: #000000;
     font-weight: 400;
+}
+.blogCard{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .righthead a{

@@ -12,33 +12,13 @@ const errorn=document.getElementById("errorn");
 const errorEm=document.getElementById("errorEm");
 const errorp=document.getElementById("errorp");
 
-// errorf.innerText="this is for first name";
+const response=document.getElementById("response");
+console.log(response);
 
 
 
-
-
-const users=[];
-
-
-const dataForm=()=>{
-    const username=fname.value;
-    const lastName=lname.value;
-    const email=emails.value;
-    const userPassword=passwords.value;
-
-    const data={
-        username,
-        userPassword
-    }
-   users.push(data);
-    localStorage.setItem("users", JSON.stringify(users));
-    console.log(users);
-    console.log(localStorage);
-   
-    form2.reset();
-}
-
+const validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const passd= /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
 
 function validateInput(){
 
@@ -65,7 +45,7 @@ function validateInput(){
 
 
 
-    const validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+   
 
     if(!emails.value.match(validEmail)){
         errorEm.innerText="please enter valid email!";
@@ -78,7 +58,7 @@ function validateInput(){
     }
     
 
-    const passd= /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+    
 
     if(!passwords.value.match(passd)){
        errorp.innerText="put valid password please!";
@@ -90,8 +70,26 @@ function validateInput(){
         passwords.style.borderColor="#228B22";
     }
   
+}
 
+const createAccount=async()=>{
 
+    const credential=await (await fetch("https://my-brand-parfaite.cyclic.app/api/createUser",{
+        method:'POST',
+        headers:{'content-Type':'Application/json'},
+        body:JSON.stringify({
+            firstName:fname.value,
+            lastName:lname.value,
+            email:emails.value,
+            password:passwords.value
+        })
+    })).json()
+    console.log(credential);
+    if(credential.status='success'){
+        response.innerHTML="You successfully sign up";
+        response.style.color="red";
+        response.style.fontSize="28px"
+    }
 }
 
 
@@ -99,7 +97,13 @@ function validateInput(){
 form2.addEventListener("submit",e=>{
     e.preventDefault();
     validateInput();
-    dataForm();
+
+    if(fname.value!=="" && lname.value!=="" && emails.value.match(validEmail) && passwords.value.match(passd)){
+        createAccount();
+        form2.reset();
+    }
+    
+    
     
 
 

@@ -22,6 +22,15 @@ body{
 .dashboard h2{
     color: white;
 }
+.blogTable{
+    display: none;
+}
+.allUsers{
+    display:none;
+}
+.messages{
+    display: none;
+}
 
 li{
     background-color: #397130;

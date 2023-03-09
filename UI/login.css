@@ -62,9 +62,7 @@
         text-decoration: none;
         font-size: 25px;
     }
-    .form2 label{
-        padding-left: 70px;
-    }
+    
     .form2 button{
         color: white;
         font-size: large;
@@ -194,9 +192,7 @@
         margin-left: 300px;
        
     }
-    .form2 label{
-        padding-left: 70px;
-    }
+  
   
 }
 
@@ -222,9 +218,7 @@
     .header{
         gap: 200px;
     }
-    .form2 label{
-        padding-left: 100px;
-    }
+  
    
 }
 
@@ -248,9 +242,7 @@
         margin-left: 400px;
         padding-top: 40px;
     }
-    .form2 label{
-        padding-left: 110px;
-    }
+  
 }
 
 @media only screen and (min-width: 1170px){

@@ -23,7 +23,7 @@
       </div>
       <div class="navright">
         <a href="../index.html">Home</a>
-        <a href="blog.html">Blogs</a>
+        <a href="blogs.html">Blogs</a>
         <a href="login.html">Logout</a>
       </div>
     </div><br><br>
@@ -34,9 +34,9 @@
         <ul>
           <li><a href="../index.html">Home</a></li><br>
           <li><a href="login.html">Logout</a></li><br>
-          <li><a href="">Blogs</a></li><br>
-          <li><a href="">Users</a></li><br>
-          <li><a href="">Messages</a></li>
+          <li><a href="" id="blogLink">Blogs</a></li><br>
+          <li><a href="" id="userLink">Users</a></li><br>
+          <li><a href="" id="messageLink">Messages</a></li>
         </ul>
       </div>
       <div class="bodyRight">
@@ -95,8 +95,9 @@
               <th>Email</th>
               <th>Fullname</th>
               <th>Message</th>
+              <th>Delete</th>
             </thead>
-            <tbody>
+            <tbody id="tableMessages">
               <!-- <tr>
                 <td></td>
                 <td></td>
