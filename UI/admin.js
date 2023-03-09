@@ -72,11 +72,31 @@ const fetchBlogs=async()=>{
         <td>${index + 1}</td>
         <td>${allBlogs.blogTitle}</td>
         <td>${allBlogs.blogAuthor}</td>
-        <td><button>Delete</button></td>
+        <td><i class="fa fa-trash" id="faDeleteBlog" aria-hidden="true" data-blog-id=${allBlogs._id}></i></td>
         <td><i class="fa fa-refresh" aria-hidden="true"></i></td>
         </tr>
       `;
     });
+
+    //Delete blog by Id
+    const deleteButton=document.querySelectorAll('#faDeleteBlog');
+    const deletedButton=Array.from(deleteButton);
+    console.log(deletedButton);
+    deletedButton.map((item)=>{
+        item.addEventListener("click",e=>{
+            const blogId=e.target.dataset.blogId;
+            console.log(blogId);
+
+            const deleteBlogById=async()=>{
+                const deleteBlogs=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteBlog/${blogId}`,{
+                    method:'DELETE',
+                    headers:{ 'content-Type':'application/json',token:`Bearer ${token}`}
+                });
+                console.log(deleteBlogs)
+            }
+            deleteBlogById();
+        })
+    })
    
 
 }
@@ -114,16 +134,65 @@ const fetchMessages=async()=>{
         <td>${result.email}</td>
         <td>${result.fullName}</td>
         <td>${result.message}</td>
-        <td><i class="fa fa-trash" aria-hidden="true" data-message-id=${result._id}></i></td>
+        <td><i class="fa fa-trash" id="faDelete" aria-hidden="true" data-message-id=${result._id}></i></td>
        </tr>
         `;
+
+       
     });
+
+  //Delete message by Id
+
+    const deleteButton = document.querySelectorAll('#faDelete');
+        const deletionButton=Array.from(deleteButton);
+        console.log(deletionButton);
+
+        deletionButton.map((item)=>{
+            item.addEventListener("click",e=>{
+                console.log("hey");
+                const messageId=e.target.dataset.messageId;
+                console.log(messageId);
+
+                const deleteMessageById=async()=>{
+                    const fetchMessage=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteMessage/${messageId}`,{
+                        method:'DELETE',
+                        headers:{ 'content-Type':'application/json',token:`Bearer ${token}`}
+                    });
+                    console.log(fetchMessage);
+                }
+                deleteMessageById();
+
+            })
+
+            
+        })
+        
+
 
 }
 messageLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchMessages();
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
