@@ -3,44 +3,68 @@ const form=document.getElementsByClassName("form")[0];
 console.log(form);
 const email=document.getElementById("email");
 const contact=document.getElementById("contact");
-const fname=document.getElementById("name");
+const fname=document.getElementById("fname");
 const message=document.getElementById("message");
 console.log(message);
 
 // const validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 
-
 const createMessage=async()=>{
 
-    const fullMessage={
-        email:email.value,
-        fullName:fname.value,
-        contact:contact.value,
-        message:message.value
-    };
-
-    const sendData = {
-        method: "POST",
-        body: JSON.stringify(fullMessage),
-        headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
-    };
-
-    fetch("https://my-brand-parfaite.cyclic.app/api/createMessage",sendData)
-    .then(response=>response.json())
-    .then((data)=>{
-        console.log(data);
-    })
-   
+    const newMessage=await (await fetch("https://my-brand-parfaite.cyclic.app/api/createMessage",{
+        method:'POST',
+        body:JSON.stringify({
+            email:email.value,
+            fullName:fname.value,
+            contact:contact.value,
+            message:message.value
+        }),
+        headers:({'content-Type':'application/json'})
+    })).json()
+    console.log(newMessage)
 }
 
 form.addEventListener("submit",e=>{
     e.preventDefault();
-    form.reset();
-    alert('hello there');
     createMessage();
-    
+    form.reset();
 })
+
+
+
+
+
+// const createMessage=async()=>{
+
+//     const fullMessage={
+//         email:email.value,
+//         fullName:fname.value,
+//         contact:contact.value,
+//         message:message.value
+//     };
+
+//     const sendData = {
+//         method: "POST",
+//         body: JSON.stringify(fullMessage),
+//         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
+//     };
+
+//     fetch("https://my-brand-parfaite.cyclic.app/api/createMessage",sendData)
+//     .then(response=>response.json())
+//     .then((data)=>{
+//         console.log(data);
+//     })
+   
+// }
+
+// form.addEventListener("submit",e=>{
+//     e.preventDefault();
+//     // form.reset();
+//     // alert('hello there');
+//     createMessage();
+    
+// })
 
 
 

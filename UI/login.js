@@ -35,10 +35,6 @@ function validateInput(){
 
 
 
-
-
-
-
 button2.addEventListener("click",async(e)=>{
    e.preventDefault();
    validateInput();

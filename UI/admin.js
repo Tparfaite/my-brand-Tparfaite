@@ -48,9 +48,6 @@ blogForm.addEventListener("submit",e=>{
 
 
 
-
-
-
 // GetAllBlogs
 const blogTable=document.getElementById("blogTable");
 const blogs=document.getElementById("blogs");
@@ -145,20 +142,17 @@ const fetchMessages=async()=>{
 
     const deleteButton = document.querySelectorAll('#faDelete');
         const deletionButton=Array.from(deleteButton);
-        console.log(deletionButton);
 
         deletionButton.map((item)=>{
             item.addEventListener("click",e=>{
-                console.log("hey");
                 const messageId=e.target.dataset.messageId;
-                console.log(messageId);
 
                 const deleteMessageById=async()=>{
                     const fetchMessage=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteMessage/${messageId}`,{
                         method:'DELETE',
                         headers:{ 'content-Type':'application/json',token:`Bearer ${token}`}
                     });
-                    console.log(fetchMessage);
+                     
                 }
                 deleteMessageById();
 
@@ -168,29 +162,11 @@ const fetchMessages=async()=>{
         })
         
 
-
 }
 messageLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchMessages();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -221,76 +197,43 @@ const fetchAllUsers=async()=>{
         </tr>
         `;
    
+    });
+
+    //Delete user by Id
+    const deleteButtons=document.querySelectorAll(".fa-trash");
+
+    const deleteButton=Array.from(deleteButtons);
+   deleteButton.map((item)=>{
+        item.addEventListener("click",e=>{
+            const userId=e.target.dataset.userId;
+            // console.log(userId);
+
+            const deleteUserById=async()=>{
+                const deleteById=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteUser/${userId}`,{
+                    method:'DELETE',
+                    headers:{'content-Type':'application/json', token:`Bearer ${token}`}
+                });
+                console.log(deleteById.status);
+               
+            }
+            deleteUserById();
+            
+        })
+         if(deleteById.status==204){
+          fetchAllUsers();
+         }
     })
+    
+
  
 }
-
 
 userLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchAllUsers();
- 
 })
 
 
-
-//Create blogs
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Delete user
-
-// const deleteUser=()=>{
-//     const deleteIcon=document.querySelectorAll('.fa-trash');
-//     const deleteIconArr=Array.from(deleteIcon);
-//     deleteIconArr.map((icon)=>{
-//         icon.addEventListener("click",e=>{
-//             e.preventDefault();
-//             const userId=e.target.dataset.userId;
-//             console.log(userId);
-
-//             const deleteUserById=async()=>{
-//                 const deletedUser=await fetch(`https://my-brand-parfaite.cyclic.app/api/deleteUser_id${userId}`,{
-//                     method:"DELETE",
-//                     headers:{'content-Type':'application/json',token:`Bearer ${token}`}
-//                 })
-//                 console.log(deletedUser);
-//             }
-//             deleteUserById();
-//         })
-//     })
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// blogForm.addEventListener("submit",e=>{
-//     e.preventDefault();
-    
-// })
 
 
 
