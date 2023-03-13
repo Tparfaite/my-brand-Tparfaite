@@ -78,7 +78,7 @@ const fetchBlogs=async()=>{
     //Delete blog by Id
     const deleteButton=document.querySelectorAll('#faDeleteBlog');
     const deletedButton=Array.from(deleteButton);
-    console.log(deletedButton);
+    
     deletedButton.map((item)=>{
         item.addEventListener("click",e=>{
             const blogId=e.target.dataset.blogId;

@@ -58,7 +58,7 @@ button2.addEventListener("click",async(e)=>{
 
 
          if(data.data.role='admin'){
-            window.open('admin.html');
+            window.open('./admin.html');
          }else {
             window.open('../index.html')
          }
@@ -71,6 +71,7 @@ button2.addEventListener("click",async(e)=>{
     
        
    }
+   
   
   
 });
