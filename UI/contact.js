@@ -5,6 +5,7 @@ const email=document.getElementById("email");
 const contact=document.getElementById("contact");
 const fname=document.getElementById("fname");
 const message=document.getElementById("message");
+const messageCreated=document.getElementById("messageCreated");
 console.log(message);
 
 // const validEmail= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -22,7 +23,13 @@ const createMessage=async()=>{
         }),
         headers:({'content-Type':'application/json'})
     })).json()
-    console.log(newMessage)
+    console.log(newMessage);
+   
+    if(newMessage.status=="success"){
+        messageCreated.innerHTML="message send successfully!";
+        messageCreated.style.fontSize="30px"
+    }
+    
 }
 
 form.addEventListener("submit",e=>{
