@@ -16,6 +16,8 @@ const messageLink=document.getElementById("messageLink");
 const token=localStorage.getItem('token');
 console.log(token);
 
+const container=document.getElementsByClassName("container")[0];
+
 
 //Create Blog
 blogForm.addEventListener("submit",e=>{
@@ -89,11 +91,17 @@ const fetchBlogs=async()=>{
                     method:'DELETE',
                     headers:{ 'content-Type':'application/json',token:`Bearer ${token}`}
                 });
-                console.log(deleteBlogs)
+                console.log(deleteBlogs.status);
+                if(deleteBlogs.status==204){
+                    tableBody.innerHTML="";
+                    fetchBlogs();
+                }
             }
             deleteBlogById();
+            
         })
     })
+    
    
 
 }
@@ -101,6 +109,8 @@ const fetchBlogs=async()=>{
 blogLink.addEventListener('click',e=>{
     e.preventDefault();
     fetchBlogs();
+    
+   
 });
 
 
@@ -152,6 +162,11 @@ const fetchMessages=async()=>{
                         method:'DELETE',
                         headers:{ 'content-Type':'application/json',token:`Bearer ${token}`}
                     });
+                    
+                    if(fetchMessage.status==204){
+                        tableMessages.innerHTML="";
+                        fetchMessages();
+                    }
                      
                 }
                 deleteMessageById();
@@ -213,15 +228,18 @@ const fetchAllUsers=async()=>{
                     method:'DELETE',
                     headers:{'content-Type':'application/json', token:`Bearer ${token}`}
                 });
-                console.log(deleteById.status);
+                if(deleteById.status==204){
+                    tableBodyUsers.innerHTML="";
+                    fetchAllUsers();
+                }
+               
+
                
             }
             deleteUserById();
             
         })
-         if(deleteById.status==204){
-          fetchAllUsers();
-         }
+        
     })
     
 
@@ -231,6 +249,8 @@ const fetchAllUsers=async()=>{
 userLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchAllUsers();
+    // window.reload();
+    
 })
 
 
