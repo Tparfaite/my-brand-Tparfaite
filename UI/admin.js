@@ -181,6 +181,7 @@ const fetchMessages=async()=>{
 messageLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchMessages();
+    
 })
 
 
@@ -249,7 +250,7 @@ const fetchAllUsers=async()=>{
 userLink.addEventListener("click",e=>{
     e.preventDefault();
     fetchAllUsers();
-    // window.reload();
+   
     
 })
 

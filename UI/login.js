@@ -57,10 +57,10 @@ button2.addEventListener("click",async(e)=>{
      
 
 
-         if(data.data.role='admin'){
-            window.open('./admin.html');
-         }else {
-            window.open('../index.html')
+         if(data.data.role =='admin'){
+            window.open('admin.html');
+         }else if(data.data.role =='user'){
+            window.open('blogs.html')
          }
         
         
